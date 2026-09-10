@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tìm Kiếm Sản Phẩm - Premium</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1 class="logo">Product Search</h1>
+                <p class="tagline">Tìm kiếm sản phẩm cao cấp</p>
+            </div>
+        </header>
+
+        <!-- Search Section -->
+        <section class="search-section">
+            <div class="search-container">
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    class="search-input" 
+                    placeholder="Nhập mã lệnh, mã sản phẩm hoặc mã tem..."
+                    autocomplete="off"
+                >
+                <button class="search-button" onclick="searchProduct()">Tìm Kiếm</button>
+            </div>
+            <div id="searchSuggestions" class="search-suggestions"></div>
+        </section>
+
+        <!-- Results Section -->
+        <section class="results-section">
+            <div id="resultContainer" class="result-container">
+                <!-- Results will be displayed here -->
+            </div>
+        </section>
+
+        <!-- Product Details Modal -->
+        <div id="detailsModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <div id="modalBody" class="modal-body">
+                    <!-- Product details will be displayed here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
